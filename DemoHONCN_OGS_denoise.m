@@ -1,6 +1,6 @@
 % HTVp_OGSTV for Poisson Noise removal
 % written by KS Jon, 20200426
-
+% 9.7.0.1190202 (R2019b)
 close all;
 clc;
 clear variables
@@ -27,7 +27,6 @@ for mm = 1:size(maxValuelist, 2)
     H = BlurMatrix(psf,size(Img));
     params.H = H;
     Img = double(Img);
-    gmax = max(Img(:));
     Img = MaxValue * Img / max(Img(:));
     params.Img = Img;
     % Add Poisson noise to the blurred image
