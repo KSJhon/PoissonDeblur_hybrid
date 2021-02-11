@@ -39,9 +39,7 @@ for mm = 1:size(maxValuelist, 2)
     
     H = BlurMatrix(psf,size(Img));  % blur matrix
     params.H = H;
-    %Img = imread('fgerPr(512).png'); %gorilla.pgm tank.tiff
     Img = double(Img);
-    gmax = max(Img(:));
     Img = MaxValue * Img / max(Img(:));
     params.Img = Img;
     % Add Poisson noise to the blurred image
@@ -63,7 +61,7 @@ for mm = 1:size(maxValuelist, 2)
     
     %display%
     figure, imshow(Bn,[]), title('observed image')
-    figure,imshow(out.sol,[ ]), title('recovered image')
+    figure,imshow(out.sol,[]), title('recovered image')
     
     % get PSNR and SSIM values for estimated image
     psnr_est = psnr(out.sol, Img, MaxValue);
