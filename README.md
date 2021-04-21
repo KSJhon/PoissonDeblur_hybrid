@@ -3,7 +3,7 @@ Poisson deblurring via hybrid regularizer
 This repository contains a copy of the code used in the paper "Poisson Noisy Image Restoration via Overlapping Group Sparse and Nonconvex Second-order Total Variation Priors".
 
 If you used this code, please kindly consider citing the following paper:
-@article{10.1371/journal.pone.0250260,
+@article{JON_PONE2021,
     doi = {10.1371/journal.pone.0250260}
     author = {Jon, Kyongson AND Liu, Jun AND Lv, Xiaoguang AND Zhu, Wensheng}
     journal = {PLOS ONE}
