@@ -53,15 +53,15 @@ for mm = 1:size(maxValuelist, 2)
     
     % get PSNR and SSIM values for degraded image
     psnr_blurry = psnr(Bn, Img, MaxValue);
-    ssim_blurry = ssim(Bn,Img,'DynamicRange', MaxValue);
+    ssim_blurry = ssim(Bn,Img, 'DynamicRange', MaxValue);
     
     tic
     out = HTVp_OGSTV(Bn, params);
     toc
     
     %display%
-    figure, imshow(Bn,[]), title('observed image')
-    figure,imshow(out.sol,[]), title('recovered image')
+    figure, imshow(Bn, []), title('observed image')
+    figure,imshow(out.sol, []), title('recovered image')
     
     % get PSNR and SSIM values for estimated image
     psnr_est = psnr(out.sol, Img, MaxValue);
@@ -81,7 +81,7 @@ params.p            = .1;
 params.stepLength   = 1;
 params.alpha        = .3;
 params.lam          = 3 * MaxValue;
-params.delta         = [0.01,0.1,0.01];
+params.delta        = [0.01,0.1,0.01];
 
 params.MaxValue = MaxValue;
 
