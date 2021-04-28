@@ -6,7 +6,7 @@ clc;
 clear variables
 ima_dir = 'Test images';
 maxValuelist    = [350 300 200 100];
-etaValueList    = [25 24 20 15 10];
+etaValueList    = [25 20 15 10];
 psf             = fspecial('average', 1); % For denoising. (K is the identity operator)
 bgd = 0;
 
